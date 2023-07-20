@@ -1,2 +1,2 @@
 # ml_bank
-mechine learning for bank
+machine learning for bank
