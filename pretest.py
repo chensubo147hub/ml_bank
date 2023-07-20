@@ -47,16 +47,11 @@ class Ts2Reg():
     
 
 class threesigma():
-    
     def three_sigma(s):
         mean, std = np.mean(s), np.std(s)
         lower, upper = mean-3*std, mean+3*std
         return lower, upper
-    
-    
-    #sigma=np.std(df['y'].values[1:]-df['y'].values[:-1])/df['y'].values.mean()
-    #pred['yhat_upper']=pred['yhat'].values*(1+three_sigma)
-    #pred['yhat_lower' ]=pred['yhat'].values*(1-three_sigma)
+        
     def ts_3sigma(true,pred):
         sigma = np.std(true[1:]-true[:-1])/true.mean()
         threesigma = 3*sigma
